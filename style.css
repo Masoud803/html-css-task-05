@@ -5,6 +5,8 @@
 body{
     background-color: #a9c7e0;
 }
+
+/* Navigation Bar Styling */
 nav{
     width: 100%;
     height: 100px;
@@ -43,8 +45,52 @@ i{
     cursor: pointer;
 }
 
+/* Home Styling */
+.home{
+    display: grid;
+    grid-template-columns: 20% 75%;
+    margin: 30px 0px;
+    justify-content: space-evenly;
+}
+.categories{
+    background-color: #f0f8ff;
+    border: 1px solid #f5deb3;
+    padding: 15px;
+}
+.categories h2{
+    background-color: rgba(71, 71, 186, 0.804);
+    color: #fff;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+.categories li{
+    list-style-type: none;
+    padding: 8px 0px;
+    padding-left: 20px;
+}
+.categories li a{
+    text-decoration: none;
+    color: #000;
+}
+.background-img{
+    background-image: linear-gradient(rgba(0,0,0,0.43), rgba(0,0,0,0.438)), url(./Images/tech-image-back.jpg);
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.background-img h2{
+    z-index: 2;
+    text-align: center;
+    font-size: 28px;
+}
 
-@media(max-width: 100px){
+/* Responsive Navigation Bar For Small Screen */
+
+@media(max-width: 1000px){
     nav{
         height: 80px;
     }
@@ -61,17 +107,44 @@ i{
         padding: 7px;
     }
     .cart{
-        padding: 0px 20px;
+        padding-right: 30px;
+        padding-left: 30px;
         width: 20px;
         height: 20px;
     }
     .cart img{
-        padding-left: 7px;
+        padding-left: 10px;
+    }
+    .background-img h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+    .background-img img{
+        width: 60%;
+    }
+
+    /* Home Styling Responsive */
+    .home{
+        grid-template-columns: 20% 75%;
+        margin: 20px 0px;
+    }
+    .categories{
+        padding: 10px;
+    }
+    .categories h2{
+        font-size: 18px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+    }
+    .categories li{
+        padding: 6px 0px;
     }
 }
 
+/* Responsive Navigation Bar For Mobile */
 @media(max-width: 400px){
     nav{
+        width: 100%;
         height: 60px;
     }
     #logo{
@@ -89,11 +162,39 @@ i{
         margin-left: -28px;
     }
     .cart{
-        padding: 0px 15px;
+        padding-right: 25px;
+        padding-left: 25px;
         width: 15px;
         height: 15px;
     }
     .cart img{
         padding-left: 5px;
     }
+
+    /* Home Styling Responsive */
+    .home{
+        margin: 20px 0px;
+    }
+    .categories{
+        padding: 5px;
+        height: 70px; 
+    }
+    .categories h2{
+        font-size: 7px;
+        padding: 2px;
+        margin-top: 2px;
+    }
+    .categories li{
+        padding: 2px 0px;
+        font-size: 1vh;
+    }
+    .background-img{
+        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(./Images/tech-image-back.jpg);
+        background-size: cover;
+        width: 40%;
+    }
+    .background-img h2{
+        font-size: 10px;
+    }
 }
+
